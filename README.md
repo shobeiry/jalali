@@ -1,6 +1,6 @@
 ## shobeiry/jalali
 
- - Jalali Calendar Is A Solar Calendar That Was Used In Persia, Variants Of Which Today Are Still In Use In Iran As Well As Afghanistan. [Read more on Wikipedia](http://en.wikipedia.org/wiki/Jalali_calendar) or see [Calendar Converter](http://www.fourmilab.ch/documents/calendar/).
+ - Jalali calendar is a solar calendar that was used in Persian, variants of which today are still in use in Iran as well as Afghanistan. [Read more on Wikipedia](http://en.wikipedia.org/wiki/Jalali_calendar) or see [Calendar Converter](http://www.fourmilab.ch/documents/calendar/).
 
 ## Basic Usage
 For Start Import `Jalalian` Library To Your Code Then Use:
@@ -21,7 +21,6 @@ jd.format('Y/m/d H:i:s')  # ۱۴۰۱/۰۴/۳۰ ۲۱:۳۸:۴۸
 jd.sub(years=1, months=5, hours=10)
 jd.format('Y/m/d H:i:s')  # ۱۳۹۹/۱۱/۲۸ ۱۱:۳۸:۴۸
 
-
 # نکته: اهمّیّت حروف بزرگ و کوچک در نام تابع و کاراکترهای پارامترها  
 jdate('E') # بهمن  
 jdate('e') # زمستان  
@@ -30,7 +29,8 @@ jdate('e') # زمستان
 jdate('H i s') # 10 26 53  
 jdate('H:i:s') # 10:26:53  
 jdate('Y/n/j') # 1389/11/22  
-jdate('Y E j') # 22 بهمن 1389jdate('V E J') # بیست و دو بهمن هزار و سیصد و هشتاد و نه  
+jdate('Y E j') # 22 بهمن 1389
+jdate('V E J') # بیست و دو بهمن هزار و سیصد و هشتاد و نه  
   
 # خارج کردن بعضی از کاراکترها یا حروف ، به صورت خام و تبدیل نشده با گذاشتن \ قبل از آن ها  
 # منظور از کاراکتر ، تمامی حروف بزرگ و کوچک انگلیسی است که در جدول مربوطه نیز فهرست شده اند  
