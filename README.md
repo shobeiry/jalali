@@ -8,18 +8,18 @@ For Start Import `Jalalian` Library To Your Code Then Use:
 from src.Jalalian import jdate, JDate
 
 jd = JDate('2017-02-01 21:38:48')
-print(jd.format('Y/m/d H:i:s'))  # ۱۳۹۵/۱۱/۱۳ ۲۱:۳۸:۴۸
+jd.format('Y/m/d H:i:s')  # ۱۳۹۵/۱۱/۱۳ ۲۱:۳۸:۴۸
 jd.add(years=3, months=2)
-print(jd.format('Y/m/d H:i:s'))  # ۱۳۹۹/۰۱/۱۵ ۲۱:۳۸:۴۸
+jd.format('Y/m/d H:i:s')  # ۱۳۹۹/۰۱/۱۵ ۲۱:۳۸:۴۸
 jd.sub(years=1, months=5, hours=10)
-print(jd.format('Y/m/d H:i:s'))  # ۱۳۹۷/۰۸/۰۹ ۱۱:۳۸:۴۸
+jd.format('Y/m/d H:i:s')  # ۱۳۹۷/۰۸/۰۹ ۱۱:۳۸:۴۸
 
 jd = JDate('1398-02-01 21:38:48', False)
-print(jd.format('Y/m/d H:i:s'))  # ۱۳۹۸/۰۲/۳۱ ۲۱:۳۸:۴۸
+jd.format('Y/m/d H:i:s')  # ۱۳۹۸/۰۲/۳۱ ۲۱:۳۸:۴۸
 jd.add(years=3, months=2)
-print(jd.format('Y/m/d H:i:s'))  # ۱۴۰۱/۰۴/۳۰ ۲۱:۳۸:۴۸
+jd.format('Y/m/d H:i:s')  # ۱۴۰۱/۰۴/۳۰ ۲۱:۳۸:۴۸
 jd.sub(years=1, months=5, hours=10)
-print(jd.format('Y/m/d H:i:s'))  # ۱۳۹۹/۱۱/۲۸ ۱۱:۳۸:۴۸
+jd.format('Y/m/d H:i:s')  # ۱۳۹۹/۱۱/۲۸ ۱۱:۳۸:۴۸
 
 
 # نکته: اهمّیّت حروف بزرگ و کوچک در نام تابع و کاراکترهای پارامترها  
