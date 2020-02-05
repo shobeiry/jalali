@@ -8,7 +8,7 @@ pip install shobeiry_jalali
 ## Basic Usage
 For Start Import `Jalalian` Library To Your Code Then Use:
 ```python
-from src.Jalalian import jdate, JDate
+from shobeiry_jalali.Jalalian import jdate, JDate
 
 jd = JDate('2017-02-01 21:38:48')
 jd.format('Y/m/d H:i:s')  # ۱۳۹۵/۱۱/۱۳ ۲۱:۳۸:۴۸
