@@ -138,6 +138,7 @@ def jdate(result_format, timestamp=0.0, time_zone='Asia/Tehran', tr_num='fa'):
         now = datetime.datetime.now(tz)
     else:
         now = datetime.datetime.fromtimestamp(timestamp)
+    t_sec += now.timestamp()
     date = now.strftime('%H_%M_%d_%m_%z_%z_%S_%w_%Y').split('_')
     j_temp = gregorian_to_jalali(int(date[8]), int(date[3]), int(date[2]))
     j_y = j_temp.year
@@ -226,7 +227,7 @@ def jdate(result_format, timestamp=0.0, time_zone='Asia/Tehran', tr_num='fa'):
         elif sub == 't':
             out += (31 - int(j_m / 6.5)) if j_m != 12 else kab + 29
         elif sub == 'U':
-            out += t_sec
+            out += str(t_sec * 1000)
         elif sub == 'v':
             out += jdate_words({'ss': j_y % 100}, ' ')
         elif sub == 'V':
