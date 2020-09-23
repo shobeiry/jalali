@@ -67,11 +67,15 @@ class JDate:
             if error:
                 print("Date Time Must Be In Below Formats:")
                 print("year-month-day | For Example: '" + jdate("Y-m-d") + "' Or '" + self.date.strftime("%Y-%m-%d"))
-                print("year-month-day hour:minutes:seconds| For Example: '" + jdate("Y-m-d H:i:s") + "' Or '" + self.date.strftime("%Y-%m-%d %H:%M:%S"))
-                print("year-month-day hour:minutes:seconds.microseconds| For Example: '" + jdate("Y-m-d H:i:s.u") + "' Or '" + self.date.strftime("%Y-%m-%d %H:%M:%S.%f"))
+                print("year-month-day hour:minutes:seconds| For Example: '" + jdate(
+                    "Y-m-d H:i:s") + "' Or '" + self.date.strftime("%Y-%m-%d %H:%M:%S"))
+                print("year-month-day hour:minutes:seconds.microseconds| For Example: '" + jdate(
+                    "Y-m-d H:i:s.u") + "' Or '" + self.date.strftime("%Y-%m-%d %H:%M:%S.%f"))
                 print("year/month/day | For Example: '" + jdate("Y/m/d") + "' Or '" + self.date.strftime("%Y/%m/%d"))
-                print("year/month/day hour:minutes:seconds| For Example: '" + jdate("Y/m/d H:i:s") + "' Or '" + self.date.strftime("%Y/%m/%d %H:%M:%S"))
-                print("year/month/day hour:minutes:seconds.microseconds| For Example: '" + jdate("Y/m/d H:i:s.u") + "' Or '" + self.date.strftime("%Y/%m/%d %H:%M:%S.%f"))
+                print("year/month/day hour:minutes:seconds| For Example: '" + jdate(
+                    "Y/m/d H:i:s") + "' Or '" + self.date.strftime("%Y/%m/%d %H:%M:%S"))
+                print("year/month/day hour:minutes:seconds.microseconds| For Example: '" + jdate(
+                    "Y/m/d H:i:s.u") + "' Or '" + self.date.strftime("%Y/%m/%d %H:%M:%S.%f"))
                 exit()
 
     @staticmethod
@@ -86,16 +90,16 @@ class JDate:
         return jdate(text, self.date.timestamp(), self.tz, tr_num)
 
     def add(self, years=0, months=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, weeks=0):
-        self.date += datetime.timedelta(days=years*365)
-        self.date += datetime.timedelta(days=months*31)
-        self.date += datetime.timedelta(milliseconds=seconds*1000)
+        self.date += datetime.timedelta(days=years * 365)
+        self.date += datetime.timedelta(days=months * 31)
+        self.date += datetime.timedelta(milliseconds=seconds * 1000)
         self.date += datetime.timedelta(days=days, hours=hours, minutes=minutes, milliseconds=milliseconds, weeks=weeks)
         return self
 
     def sub(self, years=0, months=0, days=0, hours=0, minutes=0, seconds=0, milliseconds=0, weeks=0):
         self.date -= datetime.timedelta(days=years * 365)
         self.date -= datetime.timedelta(days=months * 31)
-        self.date -= datetime.timedelta(milliseconds=seconds*1000)
+        self.date -= datetime.timedelta(milliseconds=seconds * 1000)
         self.date -= datetime.timedelta(days=days, hours=hours, minutes=minutes, milliseconds=milliseconds, weeks=weeks)
         return self
 
@@ -120,6 +124,7 @@ class JDate:
     def milliseconds(self):
         return int(self.format('f'))
 
+
 class Date:
     def __init__(self, year, month, day):
         self.year = year
@@ -137,7 +142,7 @@ def jdate(result_format, timestamp=0.0, time_zone='Asia/Tehran', tr_num='fa'):
     if timestamp == 0.0:
         now = datetime.datetime.now(tz)
     else:
-        now = datetime.datetime.fromtimestamp(timestamp)
+        now = datetime.datetime.fromtimestamp(timestamp, tz)
     t_sec += now.timestamp()
     date = now.strftime('%H_%M_%d_%m_%z_%z_%S_%w_%Y').split('_')
     j_temp = gregorian_to_jalali(int(date[8]), int(date[3]), int(date[2]))
@@ -414,7 +419,9 @@ def jalali_to_gregorian(jy, jm, jd):
     if days > 365:
         days = (days - 1) % 365
     gd = days + 1
-    temp = (0, 31, 29 if (((gy % 4) == 0) and ((gy % 100) != 0) or ((gy % 400) == 0)) else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+    temp = (
+    0, 31, 29 if (((gy % 4) == 0) and ((gy % 100) != 0) or ((gy % 400) == 0)) else 28, 31, 30, 31, 30, 31, 31, 30, 31,
+    30, 31)
     gm = 0
     for v in temp:
         gm += 1
