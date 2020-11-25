@@ -198,7 +198,7 @@ def jdate(result_format, timestamp=0.0, time_zone='Asia/Tehran', tr_num='fa'):
         elif sub == 'L':
             out += kab
         elif sub == 'm':
-            out += '0' + str(j_m) if j_m < 9 else str(j_m)
+            out += '0' + str(j_m) if j_m <= 9 else str(j_m)
         elif sub == 'M':
             out += jdate_words({'km': j_m}, ' ')
         elif sub == 'n':

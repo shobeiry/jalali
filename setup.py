@@ -1,9 +1,9 @@
 from distutils.core import setup
 
 setup(
-    name='shobeiry_jalali',
-    packages=['shobeiry_jalali'],
-    version='1.1.1',
+    name='jalali',
+    packages=['jalali'],
+    version='1.2',
     license='MIT',
     description='This package helps developers to easily work with Jalali (Shamsi Or Iranian) dates in Python applications.',
     author='seyed sadeq shobeiri',
