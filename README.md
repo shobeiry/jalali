@@ -1,4 +1,4 @@
-## shobeiry/jalali
+## Jalali
 
  - Jalali calendar is a solar calendar that was used in Persian, variants of which today are still in use in Iran as well as Afghanistan. [Read more on Wikipedia](http://en.wikipedia.org/wiki/Jalali_calendar) or see [Calendar Converter](http://www.fourmilab.ch/documents/calendar/).
 ## Install
