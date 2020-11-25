@@ -1,1 +1,1 @@
-from src.Jalalian import Date, jdate
+from jalali.Jalalian import Date, jdate

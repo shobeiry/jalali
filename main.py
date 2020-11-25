@@ -1,4 +1,4 @@
-from src.Jalalian import jdate, JDate
+from jalali.Jalalian import jdate, JDate
 
 jd = JDate('2017-02-01 21:38:48')
 print(jd.format('Y/m/d H:i:s'))  # ۱۳۹۵/۱۱/۱۳ ۲۱:۳۸:۴۸
