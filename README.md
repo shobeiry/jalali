@@ -1,6 +1,6 @@
 ![GitHub](https://img.shields.io/github/license/shobeiry/jalali)
 [![Downloads](https://pepy.tech/badge/jalali)](https://pepy.tech/project/jalali)
-[![Downloads](https://pepy.tech/badge/jalali/month)](https://pepy.tech/project/jalali)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/jalali)
 
 ## Jalali
 
